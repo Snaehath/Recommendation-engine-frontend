@@ -56,10 +56,6 @@ button:hover {
   margin-bottom: 10px;
 }
 
-.recommendations ul {
-  list-style-type: disc;
-  padding-left: 0;
-}
 
 .recommendations li {
   text-align: left;
@@ -70,4 +66,33 @@ button:hover {
 .error {
   color: red;
   margin-top: 10px;
+}
+
+.recommendations ul {
+  list-style: none;
+  padding: 0;
+}
+
+.movie-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+.poster {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.movie-info h3 {
+  margin: 0 0 0.3rem 0;
+}
+
+.movie-info p {
+  margin: 0.2rem 0;
 }

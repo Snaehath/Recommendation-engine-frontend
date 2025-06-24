@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -22,6 +22,8 @@ function App() {
 
       if (response.ok) {
         setRecommendations(data.recommendation);
+        console.log('Recommendations:', data.recommendation);
+
       } else {
         setError(data.error || 'Something went wrong');
         setRecommendations([]);
@@ -51,13 +53,23 @@ function App() {
 
       {recommendations.length > 0 && (
         <div className="recommendations">
-          <h2>Recommended Movies:</h2>
-          <ul>
-            {recommendations.map((movie, index) => (
-              <li key={index}>{movie}</li>
-            ))}
-          </ul>
+  <h2>Recommended Movies:</h2>
+  <ul>
+    {recommendations.map((movie, index) => (
+      <li key={index} className="movie-item">
+        <img
+          src={movie.poster || 'https://via.placeholder.com/120x180?text=No+Image'}
+          alt={movie.title}
+          className="poster"
+        />
+        <div className="movie-info">
+          <h3>{movie.title}</h3>
+          <p>Year: {movie.year || 'N/A'}</p>
         </div>
+      </li>
+    ))}
+  </ul>
+</div>
       )}
     </div>
   );
