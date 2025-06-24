@@ -22,7 +22,6 @@ function App() {
 
       if (response.ok) {
         setRecommendations(data.recommendation);
-        console.log('Recommendations:', data.recommendation);
 
       } else {
         setError(data.error || 'Something went wrong');
