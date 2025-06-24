@@ -1,0 +1,73 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  background-color: #1a1a1a; /* Dark background */
+  color: #ffffff;
+}
+
+/* Input + Button Container */
+.input-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Input styling */
+input {
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #535bf2;
+}
+
+/* Recommendation List */
+.recommendations {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.recommendations h2 {
+  margin-bottom: 10px;
+}
+
+.recommendations ul {
+  list-style-type: disc;
+  padding-left: 0;
+}
+
+.recommendations li {
+  text-align: left;
+  margin: 4px 0;
+}
+
+/* Error Styling */
+.error {
+  color: red;
+  margin-top: 10px;
+}
